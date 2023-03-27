@@ -1,0 +1,727 @@
+<rdf:RDF xmlns="http://www.co-ode.org/ontologies/covid19/covid19.owl#" xmlns:covid19="http://www.co-ode.org/ontologies/covid19/covid19.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:terms="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="http://www.co-ode.org/ontologies/covid19/covid19.owl">
+<owl:Ontology rdf:about="http://www.co-ode.org/ontologies/covid19">
+<owl:versionIRI rdf:resource="http://www.co-ode.org/ontologies/covid19/2.0.0"/>
+<dc:title xml:lang="en">covid19</dc:title>
+<terms:contributor>sachin</terms:contributor>
+<terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 (CC BY 3.0)</terms:license>
+<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">covid19</rdfs:label>
+<terms:provenance xml:lang="en">v2.0 Added new annotations to the ontology using standard/well-know annotation properties v1.5. Removed protege.owl import and references. Made ontology URI date-independent v1.4.</terms:provenance>
+<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0</owl:versionInfo>
+<dc:description xml:lang="en">An ontology about covid19 to spread the awareness to the general public about, Coronavirus, infection possibilities, precautions and symptoms of the disease.</dc:description>
+</owl:Ontology>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  http://purl.org/dc/elements/1.1/description  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+<!--  http://purl.org/dc/elements/1.1/title  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+<!--  http://purl.org/dc/terms/contributor  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+<!--  http://purl.org/dc/terms/license  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+<!--  http://purl.org/dc/terms/provenance  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/provenance"/>
+<!--  http://www.w3.org/2004/02/skos/core#altLabel  -->
+<owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+<!--  http://www.w3.org/2004/02/skos/core#definition  -->
+<owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+<!--  http://www.w3.org/2004/02/skos/core#prefLabel  -->
+<owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  Define the mightBeInfected Property  -->
+<owl:ObjectProperty rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19"/>
+<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Varients"/>
+</owl:ObjectProperty>
+<!--  Define the hasFacility Property  -->
+<owl:ObjectProperty rdf:about="https://www.healthdesign.org/covid-19-resources-healthcare-facilities">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19"/>
+<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Facilities"/>
+</owl:ObjectProperty>
+<!--  Define the hasToGet Property  -->
+<owl:ObjectProperty rdf:about="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19"/>
+<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Vaccine"/>
+</owl:ObjectProperty>
+<!--  Define the shouldTake Property  -->
+<owl:ObjectProperty rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19"/>
+<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Treatment"/>
+</owl:ObjectProperty>
+<!--  Define the hasSymptoms Property  -->
+<owl:ObjectProperty rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19"/>
+<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Symptoms"/>
+</owl:ObjectProperty>
+<!--  Define the infectThrough Property  -->
+<owl:ObjectProperty rdf:about="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7293495/">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19"/>
+<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Symptoms"/>
+</owl:ObjectProperty>
+
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+
+<!--  OWL class definition - InfectedPatient  -->
+<owl:Class rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/hcp/duration-isolation.html">
+<rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Patient"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<owl:someValuesFrom rdf:resource="https://www.yalemedicine.org/news/5-things-to-know-delta-variant-covid"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<owl:someValuesFrom rdf:resource="https://health.ucdavis.edu/coronavirus/covid-19-information/omicron-variant"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<owl:someValuesFrom rdf:resource="https://en.wikipedia.org/wiki/SARS-CoV-2_Alpha_variant"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<owl:someValuesFrom rdf:resource="https://en.wikipedia.org/wiki/SARS-CoV-2_Beta_variant"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<owl:someValuesFrom rdf:resource="https://en.wikipedia.org/wiki/SARS-CoV-2_Gamma_variant"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.healthdesign.org/covid-19-resources-healthcare-facilities"/>
+<owl:someValuesFrom rdf:resource="https://www.who.int/teams/health-care-readiness/covid-19"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.healthdesign.org/covid-19-resources-healthcare-facilities"/>
+<owl:someValuesFrom rdf:resource="https://www.unicef.org/srilanka/press-releases/covid-19-isolation-and-treatment-units-established-key-hospitals-unicef-support"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.healthdesign.org/covid-19-resources-healthcare-facilities"/>
+<owl:someValuesFrom rdf:resource="https://epicentre.org.za/ipc/?gclid=Cj0KCQiA1sucBhDgARIsAFoytUsXHYhQw8K3DmHuSvZAQiK59jHDM0cLqm28M-qji8aT8x36uyhdi6saArAjEALw_wcB"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB"/>
+<owl:someValuesFrom rdf:resource="https://www.gavi.org/vaccineswork/what-are-whole-virus-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUsh4NeJtcffoti2qODoGwbmWMlquPgniaLtAFo078f1zXZ2gOunTpMaAlBjEALw_wcB"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB"/>
+<owl:someValuesFrom rdf:resource="https://www.gavi.org/vaccineswork/what-are-protein-subunit-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUvxR2moN4iCx6C6Ry_lWn7kwuO7Id8Xcb6Rux4UDn40do6emOy0pe8aAgSzEALw_wcB"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB"/>
+<owl:someValuesFrom rdf:resource="https://www.gavi.org/vaccineswork/what-are-viral-vector-based-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuGxdBuQWnmp5auE2MQeEE8q3cV6O_qWINfW1Nocl-kVyMPuZM5kw4aAq2qEALw_wcB"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB"/>
+<owl:someValuesFrom rdf:resource="https://www.gavi.org/vaccineswork/what-are-nucleic-acid-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUvSQFsh5Z48FauGnjungvaeHGG-chFr6pn_qg1Y6nx4elXr_R5yNmUaArmeEALw_wcB"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html"/>
+<owl:someValuesFrom rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/media-resources/science-in-5/episode-33---medical-oxygen?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuTHsDvgeVbtGmmoThtkhj2tpVZCWm96NhDlxX07F_paW2FxZzCpr4aAhlYEALw_wcB"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html"/>
+<owl:someValuesFrom rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/your-health/isolation.html"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html"/>
+<owl:someValuesFrom rdf:resource="https://emedicine.medscape.com/article/2500116-overview"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="https://my.clevelandclinic.org/health/symptoms/16708-loss-of-taste-and-smell#:~:text=Losing%20taste%20and%20smell%20can,taste%20(ageusia)%20is%20rare."/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="https://www.unicef.org/srilanka/covid-19-symptoms-and-caregiving"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="https://www.prevention.com/health/a31927676/what-does-dry-cough-mean/"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="https://www.webmd.com/lung/covid-fatigue"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="https://www.novanthealth.org/healthy-headlines/covid-19-and-headaches-what-you-need-to-know"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<owl:onProperty rdf:resource="https://www.healthdesign.org/covid-19-resources-healthcare-facilities"/>
+<owl:onProperty rdf:resource="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB"/>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html"/>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/> 
+<owl:allValuesFrom>
+<owl:Class>
+<owl:unionOf rdf:parseType="Collection">
+<rdf:Description rdf:about="https://www.yalemedicine.org/news/5-things-to-know-delta-variant-covid"/>
+<rdf:Description rdf:about="https://health.ucdavis.edu/coronavirus/covid-19-information/omicron-variant"/>
+<rdf:Description rdf:about="https://en.wikipedia.org/wiki/SARS-CoV-2_Alpha_variant"/>
+<rdf:Description rdf:about="https://en.wikipedia.org/wiki/SARS-CoV-2_Beta_variant"/>
+<rdf:Description rdf:about="https://en.wikipedia.org/wiki/SARS-CoV-2_Gamma_variant"/>
+<rdf:Description rdf:about="https://www.who.int/teams/health-care-readiness/covid-19"/>
+<rdf:Description rdf:about="https://www.unicef.org/srilanka/press-releases/covid-19-isolation-and-treatment-units-established-key-hospitals-unicef-support"/>
+<rdf:Description rdf:about="https://epicentre.org.za/ipc/?gclid=Cj0KCQiA1sucBhDgARIsAFoytUsXHYhQw8K3DmHuSvZAQiK59jHDM0cLqm28M-qji8aT8x36uyhdi6saArAjEALw_wcB"/>
+<rdf:Description rdf:about="https://www.gavi.org/vaccineswork/what-are-whole-virus-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUsh4NeJtcffoti2qODoGwbmWMlquPgniaLtAFo078f1zXZ2gOunTpMaAlBjEALw_wcB"/>
+<rdf:Description rdf:about="https://www.gavi.org/vaccineswork/what-are-protein-subunit-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUvxR2moN4iCx6C6Ry_lWn7kwuO7Id8Xcb6Rux4UDn40do6emOy0pe8aAgSzEALw_wcB"/>
+<rdf:Description rdf:about="https://www.gavi.org/vaccineswork/what-are-viral-vector-based-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuGxdBuQWnmp5auE2MQeEE8q3cV6O_qWINfW1Nocl-kVyMPuZM5kw4aAq2qEALw_wcB"/>
+<rdf:Description rdf:about="https://www.gavi.org/vaccineswork/what-are-nucleic-acid-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUvSQFsh5Z48FauGnjungvaeHGG-chFr6pn_qg1Y6nx4elXr_R5yNmUaArmeEALw_wcB"/>
+<rdf:Description rdf:about="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/media-resources/science-in-5/episode-33---medical-oxygen?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuTHsDvgeVbtGmmoThtkhj2tpVZCWm96NhDlxX07F_paW2FxZzCpr4aAhlYEALw_wcB"/>
+<rdf:Description rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/your-health/isolation.html"/>
+<rdf:Description rdf:about="https://emedicine.medscape.com/article/2500116-overview"/>
+<rdf:Description rdf:about="https://my.clevelandclinic.org/health/symptoms/16708-loss-of-taste-and-smell#:~:text=Losing%20taste%20and%20smell%20can,taste%20(ageusia)%20is%20rare."/>
+<rdf:Description rdf:about="https://www.unicef.org/srilanka/covid-19-symptoms-and-caregiving"/>
+<rdf:Description rdf:about="https://www.prevention.com/health/a31927676/what-does-dry-cough-mean/"/>
+<rdf:Description rdf:about="https://www.webmd.com/lung/covid-fatigue"/>
+<rdf:Description rdf:about="https://www.novanthealth.org/healthy-headlines/covid-19-and-headaches-what-you-need-to-know"/>
+</owl:unionOf>
+</owl:Class>
+</owl:allValuesFrom>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#mightBeInfected"/>
+<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#hasFacility"/>
+<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#hasToGet"/>
+<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#shouldTake"/>
+<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#hasSymptom"/>
+<owl:hasValue rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">covid19</rdfs:label>
+<rdfs:label xml:lang="pt">covid-19</rdfs:label>
+<skos:altLabel xml:lang="en">covid19</skos:altLabel>
+<skos:altLabel xml:lang="en">covid19 patient</skos:altLabel>
+<skos:altLabel xml:lang="en">covid19 variants</skos:altLabel>
+<skos:altLabel xml:lang="en">covid19 facilties</skos:altLabel>
+<skos:altLabel xml:lang="en">covid19 vaccines</skos:altLabel>
+<skos:altLabel xml:lang="en">covid19 Treatment</skos:altLabel>
+<skos:altLabel xml:lang="en">covid19 Symptoms</skos:altLabel>
+<skos:prefLabel xml:lang="en">covid19</skos:prefLabel>
+</owl:Class>
+<!--  OWL class definition - NonInfectedPatient  -->
+<owl:Class rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/hcp/duration-isolation.html">
+<rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Patient"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7293495/"/>
+<owl:someValuesFrom rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19-mass-gatherings"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7293495/"/>
+<owl:allValuesFrom>
+<owl:Class>
+<owl:unionOf rdf:parseType="Collection">
+<rdf:Description rdf:about="https://www.yalemedicine.org/news/5-things-to-know-delta-variant-covid"/>
+</owl:unionOf>
+</owl:Class>
+</owl:allValuesFrom>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#infectThrough"/>
+<owl:hasValue rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">covid19</rdfs:label>
+<rdfs:label xml:lang="pt">covid-19</rdfs:label>
+<skos:altLabel xml:lang="en">covid19</skos:altLabel>
+<skos:altLabel xml:lang="en">Droplets</skos:altLabel>
+<skos:prefLabel xml:lang="en">covid19</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Delta   -->
+<owl:Class rdf:about="https://www.yalemedicine.org/news/5-things-to-know-delta-variant-covid">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Varients"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Delta variant</rdfs:label>
+<rdfs:label xml:lang="pt">Delta</rdfs:label>
+<skos:prefLabel xml:lang="en">Delta</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Omicron   -->
+<owl:Class rdf:about="https://health.ucdavis.edu/coronavirus/covid-19-information/omicron-variant">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Varients"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Omicron variant</rdfs:label>
+<rdfs:label xml:lang="pt">Omicron</rdfs:label>
+<skos:prefLabel xml:lang="en">Omicron</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Alpha   -->
+<owl:Class rdf:about="https://en.wikipedia.org/wiki/SARS-CoV-2_Alpha_variantt">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Varients"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Alpha variant</rdfs:label>
+<rdfs:label xml:lang="pt">Alpha</rdfs:label>
+<skos:prefLabel xml:lang="en">Alpha</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Beta   -->
+<owl:Class rdf:about="https://en.wikipedia.org/wiki/SARS-CoV-2_Beta_variant">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Varients"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Beta variant</rdfs:label>
+<rdfs:label xml:lang="pt">Beta</rdfs:label>
+<skos:prefLabel xml:lang="en">Beta</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Gamma   -->
+<owl:Class rdf:about="https://www.yalemedicine.org/news/5-things-to-know-delta-variant-covid">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Varients"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Gamma variant</rdfs:label>
+<rdfs:label xml:lang="pt">Gamma</rdfs:label>
+<skos:prefLabel xml:lang="en">Gamma</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Medical Clinic   -->
+<owl:Class rdf:about="https://www.yalemedicine.org/news/5-things-to-know-delta-variant-covid">
+<rdfs:subClassOf rdf:resource="https://www.healthdesign.org/covid-19-resources-healthcare-facilities"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.healthdesign.org/covid-19-resources-healthcare-facilities"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Facilities"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Medical Clinical facility</rdfs:label>
+<rdfs:label xml:lang="pt">Medical Clinical</rdfs:label>
+<skos:prefLabel xml:lang="en">Medical Clinical</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - covid19 delicated facility   -->
+<owl:Class rdf:about="https://www.unicef.org/srilanka/press-releases/covid-19-isolation-and-treatment-units-established-key-hospitals-unicef-support">
+<rdfs:subClassOf rdf:resource="https://www.healthdesign.org/covid-19-resources-healthcare-facilities"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.healthdesign.org/covid-19-resources-healthcare-facilities"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Facilities"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">covid19 Delicated facility</rdfs:label>
+<rdfs:label xml:lang="pt">covid19 Delicated facility</rdfs:label>
+<skos:prefLabel xml:lang="en">covid19 Delicated facility</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Hospital facility   -->
+<owl:Class rdf:about="https://epicentre.org.za/ipc/?gclid=Cj0KCQiA1sucBhDgARIsAFoytUsXHYhQw8K3DmHuSvZAQiK59jHDM0cLqm28M-qji8aT8x36uyhdi6saArAjEALw_wcB">
+<rdfs:subClassOf rdf:resource="https://www.healthdesign.org/covid-19-resources-healthcare-facilities"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.healthdesign.org/covid-19-resources-healthcare-facilities"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Facilities"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Hospital facility</rdfs:label>
+<rdfs:label xml:lang="pt">covid19 Hospital facility</rdfs:label>
+<skos:prefLabel xml:lang="en">covid19 Hospital facility</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Whole Virus   -->
+<owl:Class rdf:about="https://www.gavi.org/vaccineswork/what-are-whole-virus-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUsh4NeJtcffoti2qODoGwbmWMlquPgniaLtAFo078f1zXZ2gOunTpMaAlBjEALw_wcB">
+<rdfs:subClassOf rdf:resource="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Vaccine"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Whole Virus</rdfs:label>
+<rdfs:label xml:lang="pt">Whole Virus Vaccine</rdfs:label>
+<skos:prefLabel xml:lang="en">cWhole Virus</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Protein Subunit   -->
+<owl:Class rdf:about="https://www.gavi.org/vaccineswork/what-are-protein-subunit-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUvxR2moN4iCx6C6Ry_lWn7kwuO7Id8Xcb6Rux4UDn40do6emOy0pe8aAgSzEALw_wcB">
+<rdfs:subClassOf rdf:resource="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Vaccine"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Protein Subunit</rdfs:label>
+<rdfs:label xml:lang="pt">Protein Subunit Vaccine</rdfs:label>
+<skos:prefLabel xml:lang="en">Protein Subunit</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Viral Vector   -->
+<owl:Class rdf:about="https://www.gavi.org/vaccineswork/what-are-viral-vector-based-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuGxdBuQWnmp5auE2MQeEE8q3cV6O_qWINfW1Nocl-kVyMPuZM5kw4aAq2qEALw_wcB">
+<rdfs:subClassOf rdf:resource="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Vaccine"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Viral Vector</rdfs:label>
+<rdfs:label xml:lang="pt">Viral Vector Vaccine</rdfs:label>
+<skos:prefLabel xml:lang="en">Viral Vector</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Nucleic Acid   -->
+<owl:Class rdf:about="https://www.gavi.org/vaccineswork/what-are-nucleic-acid-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUvSQFsh5Z48FauGnjungvaeHGG-chFr6pn_qg1Y6nx4elXr_R5yNmUaArmeEALw_wcB">
+<rdfs:subClassOf rdf:resource="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Vaccine"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Nucleic Acid</rdfs:label>
+<rdfs:label xml:lang="pt">Nucleic Acid Vaccine</rdfs:label>
+<skos:prefLabel xml:lang="en">Nucleic Acid</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Check Oxygen Level   -->
+<owl:Class rdf:about="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/media-resources/science-in-5/episode-33---medical-oxygen?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuTHsDvgeVbtGmmoThtkhj2tpVZCWm96NhDlxX07F_paW2FxZzCpr4aAhlYEALw_wcB">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19OxygenLevel"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Check Oxygen Level</rdfs:label>
+<rdfs:label xml:lang="pt">Oxygen Level</rdfs:label>
+<skos:prefLabel xml:lang="en">Check Oxygen Level</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Isolation   -->
+<owl:Class rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/your-health/isolation.html">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19OxygenLevel"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Isolation</rdfs:label>
+<rdfs:label xml:lang="pt">covid19 Isolation</rdfs:label>
+<skos:prefLabel xml:lang="en">Isolation</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Drugs   -->
+<owl:Class rdf:about="https://emedicine.medscape.com/article/2500116-overview">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19OxygenLevel"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Drugs</rdfs:label>
+<rdfs:label xml:lang="pt">covid19 Drugs</rdfs:label>
+<skos:prefLabel xml:lang="en">Drugs</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Less Taste   -->
+<owl:Class rdf:about="https://my.clevelandclinic.org/health/symptoms/16708-loss-of-taste-and-smell#:~:text=Losing%20taste%20and%20smell%20can,taste%20(ageusia)%20is%20rare.">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19OLessTaste"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Less Taste</rdfs:label>
+<rdfs:label xml:lang="pt">covid19 Less Taste Symptoms</rdfs:label>
+<skos:prefLabel xml:lang="en">Less Taste</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Fever   -->
+<owl:Class rdf:about="https://www.unicef.org/srilanka/covid-19-symptoms-and-caregiving">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19OLessTaste"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">covid19 Fever</rdfs:label>
+<rdfs:label xml:lang="pt">covid19 Fever Symptom</rdfs:label>
+<skos:prefLabel xml:lang="en">covid19 Fever</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Cough   -->
+<owl:Class rdf:about="https://www.prevention.com/health/a31927676/what-does-dry-cough-mean/">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19OLessTaste"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">covid19 Cough</rdfs:label>
+<rdfs:label xml:lang="pt">covid19 Cough Symptoms</rdfs:label>
+<skos:prefLabel xml:lang="en">covid19 Cough</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Tiredness   -->
+<owl:Class rdf:about="https://www.webmd.com/lung/covid-fatigue">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19OLessTaste"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">covid19 Tiredness</rdfs:label>
+<rdfs:label xml:lang="pt">covid19 Tiredness Symptoms</rdfs:label>
+<skos:prefLabel xml:lang="en">covid19 Tiredness</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - headache   -->
+<owl:Class rdf:about="https://www.novanthealth.org/healthy-headlines/covid-19-and-headaches-what-you-need-to-know">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19LessTaste"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">covid19 headache</rdfs:label>
+<rdfs:label xml:lang="pt">covid19 headache Symptoms</rdfs:label>
+<skos:prefLabel xml:lang="en">covid19 headache</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass definition - Droplets   -->
+<owl:Class rdf:about="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19-mass-gatherings">
+<rdfs:subClassOf rdf:resource="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7293495/"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7293495/"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Droplets"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Droplets</rdfs:label>
+<rdfs:label xml:lang="pt">Infection Droplets and Aerosols</rdfs:label>
+<skos:prefLabel xml:lang="en">Droplets</skos:prefLabel>
+</owl:Class>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  Infected Patient is a individual(instance) of the Patient class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/hcp/duration-isolation.html">
+<rdf:type rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public?gclid=Cj0KCQiA7bucBhCeARIsAIOwr--YnN9uW3wlXn-zdyfV2otpnhi-HysfFCnAClih2sn5VapgcD7lvnUaAtIAEALw_wcB"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Patient"/>
+</owl:Thing>
+<!--  Delta is a individual(instance) of the varient class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html">
+<rdf:type rdf:resource="https://www.unicef.org/coronavirus/what-you-need-to-know-covid-vaccine?gclid=Cj0KCQiA7bucBhCeARIsAIOwr-8ZJVZOexCdiRE2uF8WIyEG7UDkvnRu4C841roFKl7mDfJjCBXF3NoaArT9EALw_wcB"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid/covid19.owl#Varient"/>
+</owl:Thing>
+<!--  Omicron is a individual(instance) of the varient class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html">
+<rdf:type rdf:resource="https://www.unicef.org/coronavirus/what-you-need-to-know-covid-vaccine?gclid=Cj0KCQiA7bucBhCeARIsAIOwr-8ZJVZOexCdiRE2uF8WIyEG7UDkvnRu4C841roFKl7mDfJjCBXF3NoaArT9EALw_wcB"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid/covid19.owl#Varient"/>
+</owl:Thing>
+<!--  Alpha is a individual(instance) of the varient class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html">
+<rdf:type rdf:resource="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8342008/"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid/covid19.owl#Varient"/>
+</owl:Thing>
+<!--  Beta is a individual(instance) of the varient class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html">
+<rdf:type rdf:resource="https://www.bbc.com/news/health-55534727"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid/covid19.owl#Varient"/>
+</owl:Thing>
+<!--  Gamma is a individual(instance) of the varient class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html">
+<rdf:type rdf:resource="https://www.sciencedirect.com/science/article/pii/S1413867022000721"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid/covid19.owl#Varient"/>
+</owl:Thing>
+<!--  Medical Clinic is a individual(instance) of the Facility class  -->
+<owl:Thing rdf:about="https://www.healthdesign.org/covid-19-resources-healthcare-facilities">
+<rdf:type rdf:resource="https://equityhealthj.biomedcentral.com/articles/10.1186/s12939-020-01175-7"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Facility"/>
+</owl:Thing>
+<!--  covid19 Delicated Facility is a individual(instance) of the Facility class  -->
+<owl:Thing rdf:about="https://www.healthdesign.org/covid-19-resources-healthcare-facilities">
+<rdf:type rdf:resource="https://economictimes.indiatimes.com/news/politics-and-nation/government-classifies-health-facilities-into-3-categories-for-covid-19-patient-care/articleshow/75033608.cms"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Facility"/>
+</owl:Thing>
+<!--  Hospital Facility is a individual(instance) of the Facility class  -->
+<owl:Thing rdf:about="https://www.healthdesign.org/covid-19-resources-healthcare-facilities">
+<rdf:type rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19-staying-at-hotels-and-accommodation-establishments?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuk4dIaLFME97QilBsV0F1_EXIpGeSAu-kspDefb1WX5roX9P9KQAsaAnZvEALw_wcB"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Facility"/>
+</owl:Thing>
+<!--  Whole Virus Facility is a individual(instance) of the Vaccine class  -->
+<owl:Thing rdf:about="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB">
+<rdf:type rdf:resource="https://www.gavi.org/vaccineswork/what-are-whole-virus-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUtWu6bKSKA5OF5zlPy9Jk4ebSM3I3q2TFfCtpBLmY4ua7k8TDuoE7EaAnnFEALw_wcB"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Vaccine"/>
+</owl:Thing>
+<!--  Protein Subunit Facility is a individual(instance) of the Vaccine class  -->
+<owl:Thing rdf:about="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB">
+<rdf:type rdf:resource="https://www.gavi.org/vaccineswork/what-are-protein-subunit-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUvxR2moN4iCx6C6Ry_lWn7kwuO7Id8Xcb6Rux4UDn40do6emOy0pe8aAgSzEALw_wcB"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Vaccine"/>
+</owl:Thing>
+<!--  Viral Vector Facility is a individual(instance) of the Vaccine class  -->
+<owl:Thing rdf:about="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB">
+<rdf:type rdf:resource="https://www.gavi.org/vaccineswork/what-are-viral-vector-based-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuGxdBuQWnmp5auE2MQeEE8q3cV6O_qWINfW1Nocl-kVyMPuZM5kw4aAq2qEALw_wcB"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Vaccine"/>
+</owl:Thing>
+<!--  Nucleic Acid Facility is a individual(instance) of the Vaccine class  -->
+<owl:Thing rdf:about="https://www.gavi.org/vaccineswork/there-are-four-types-covid-19-vaccines-heres-how-they-work?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuPMnNALkwjrkfL6tlenuK-6noRvWTq1PQjrYAnNWR7U2v8xxLkkYgaAnJQEALw_wcB">
+<rdf:type rdf:resource="https://www.gavi.org/vaccineswork/what-are-nucleic-acid-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUvSQFsh5Z48FauGnjungvaeHGG-chFr6pn_qg1Y6nx4elXr_R5yNmUaArmeEALw_wcB"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Vaccine"/>
+</owl:Thing>
+<!--  Check Oxygen Level is a individual(instance) of the Treatment class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html">
+<rdf:type rdf:resource="https://www.blf.org.uk/support-for-you/breathing-tests/tests-measure-oxygen-levels"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Treatment"/>
+</owl:Thing>
+<!--  Isolation is a individual(instance) of the Treatment class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html">
+<rdf:type rdf:resource="https://covid19.ca.gov/quarantine-and-isolation/"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Treatment"/>
+</owl:Thing>
+<!--  Drugs is a individual(instance) of the Treatment class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html">
+<rdf:type rdf:resource="https://www.yalemedicine.org/news/covid-19-treatment-drugs"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Treatment"/>
+</owl:Thing>
+<!--  Less Taste is a individual(instance) of the Symptoms class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">
+<rdf:type rdf:resource="https://www.medicalnewstoday.com/articles/covid-19-and-loss-of-taste"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Symptoms"/>
+</owl:Thing>
+<!--  Fever is a individual(instance) of the Symptoms class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">
+<rdf:type rdf:resource="https://ada.com/covid/covid-19-fever-range/"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Symptoms"/>
+</owl:Thing>
+<!--  Cough is a individual(instance) of the Symptoms class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">
+<rdf:type rdf:resource="https://www.everydayhealth.com/coronavirus/how-to-cope-with-a-covid-19-cough/"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Symptoms"/>
+</owl:Thing>
+<!--  Tiredness is a individual(instance) of the Symptoms class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">
+<rdf:type rdf:resource="https://www.everydayhealth.com/coronavirus/how-to-beat-covid-19-fatigue-and-get-your-energy-back/"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Symptoms"/>
+</owl:Thing>
+<!--  Headache is a individual(instance) of the Symptoms class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">
+<rdf:type rdf:resource="https://thejournalofheadacheandpain.biomedcentral.com/articles/10.1186/s10194-022-01450-8"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Symptoms"/>
+</owl:Thing>
+<!--  Droplets is a individual(instance) of the Infection class  -->
+<owl:Thing rdf:about="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7293495/">
+<rdf:type rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19-mass-gatherings"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Infection"/>
+</owl:Thing>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="https://www.yalemedicine.org/news/5-things-to-know-delta-variant-covid"/>
+<rdf:Description rdf:about="https://health.ucdavis.edu/coronavirus/covid-19-information/omicron-variant"/>
+<rdf:Description rdf:about="https://en.wikipedia.org/wiki/SARS-CoV-2_Alpha_variant"/>
+<rdf:Description rdf:about="https://en.wikipedia.org/wiki/SARS-CoV-2_Beta_variant"/>
+<rdf:Description rdf:about="https://www.yalemedicine.org/news/5-things-to-know-delta-variant-covid"/>
+<rdf:Description rdf:about="https://www.who.int/teams/health-care-readiness/covid-19"/>
+<rdf:Description rdf:about="https://www.unicef.org/srilanka/press-releases/covid-19-isolation-and-treatment-units-established-key-hospitals-unicef-support"/>
+<rdf:Description rdf:about="https://epicentre.org.za/ipc/?gclid=Cj0KCQiA1sucBhDgARIsAFoytUsXHYhQw8K3DmHuSvZAQiK59jHDM0cLqm28M-qji8aT8x36uyhdi6saArAjEALw_wcB"/>
+<rdf:Description rdf:about="https://www.gavi.org/vaccineswork/what-are-whole-virus-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUtWu6bKSKA5OF5zlPy9Jk4ebSM3I3q2TFfCtpBLmY4ua7k8TDuoE7EaAnnFEALw_wcB"/>
+<rdf:Description rdf:about="https://www.gavi.org/vaccineswork/what-are-protein-subunit-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUvxR2moN4iCx6C6Ry_lWn7kwuO7Id8Xcb6Rux4UDn40do6emOy0pe8aAgSzEALw_wcB"/>
+<rdf:Description rdf:about="https://www.gavi.org/vaccineswork/what-are-viral-vector-based-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUuGxdBuQWnmp5auE2MQeEE8q3cV6O_qWINfW1Nocl-kVyMPuZM5kw4aAq2qEALw_wcB"/>
+<rdf:Description rdf:about="https://www.gavi.org/vaccineswork/what-are-nucleic-acid-vaccines-and-how-could-they-be-used-against-covid-19?gclid=Cj0KCQiA1sucBhDgARIsAFoytUvSQFsh5Z48FauGnjungvaeHGG-chFr6pn_qg1Y6nx4elXr_R5yNmUaArmeEALw_wcB"/>
+<rdf:Description rdf:about="https://www.blf.org.uk/support-for-you/breathing-tests/tests-measure-oxygen-levels"/>
+<rdf:Description rdf:about="https://covid19.ca.gov/quarantine-and-isolation/"/>
+<rdf:Description rdf:about="https://www.yalemedicine.org/news/covid-19-treatment-drugs"/>
+<rdf:Description rdf:about="https://www.yalemedicine.org/news/covid-19-treatment-drugs"/>
+<rdf:Description rdf:about="https://www.medicalnewstoday.com/articles/covid-19-and-loss-of-taste"/>
+<rdf:Description rdf:about="https://www.everydayhealth.com/coronavirus/how-to-cope-with-a-covid-19-cough/"/>
+<rdf:Description rdf:about="https://www.everydayhealth.com/coronavirus/how-to-beat-covid-19-fatigue-and-get-your-energy-back/"/>
+<rdf:Description rdf:about="https://thejournalofheadacheandpain.biomedcentral.com/articles/10.1186/s10194-022-01450-8"/>
+</owl:members>
+</rdf:Description>
+</rdf:RDF>
